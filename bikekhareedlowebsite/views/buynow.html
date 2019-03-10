@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   header {
+  background-color: blueviolet;
+  color: #bbc2ca;
+  padding: 1rem 2%; }
+  header form {
+    float: right; }
+  header form input {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin-right: 2%;
+    padding: .2rem;
+    border: none;
+    transition: width 0s; }
+  header form input:focus {
+    width: 8rem; }
+  header h1 {
+    font-size: 4rem;
+    font-weight: 300; }
+  header h2 {
+    font-size: 2.05rem;
+    font-weight: 300; }
+* {
+    box-sizing: border-box;
+}
+
+ 
+body {
+    margin: 0;
+    background-color: black;
+}
+ 
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+.dropdown {
+    float: left;
+    overflow:auto;
+}
+ 
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+    position: relative;
+}
+ 
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+ 
+.dropdown-content {
+    display: none;
+ 
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+ 
+   
+    z-index: 9999;
+}
+ 
+.dropdown-content .header {
+    background: red;
+   
+   
+}
+ 
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+   
+    padding:52px;
+    background-color: #ccc;
+   
+}
+ 
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+ 
+.column a:hover {
+    background-color: #ddd;
+}
+ 
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ 
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+    /*  ----------------------- NAVIGATION --------------------------- */
+@media screen and (max-width: 60rem){
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+ 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+ 
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+/* Add a color to the active/current link */
+.topnav a.active {
+  
+  background-color: #4CAF50;
+  color: white;
+}
+}
+}
+.topnav-right {
+  float: right;
+  }
+ 
+ 
+  /*FOOTER KI CSS*/
+  footer {
+  width: 100%;
+  background-color: #424e64; }
+  footer p {
+    text-align: center;
+    color: #bbc2ca;
+    padding: .75rem 0;
+    font-size: .9rem; }
+  footer p a {
+    color: #bbc2ca; }
+ 
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+
+        <header>
+  
+                <h1>bikekhareedlo</h1>
+                <h2>Quality you can buy</h2>
+            </header>
+            <div class="navbar">
+                    <a href="/indexl">Home</a>
+                    
+                       
+                      
+                       <div class="dropdown">
+                      <button class="dropbtn">menu
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                       
+                        <div class="row" >
+                          <div class="column">
+                            <h3>  BAJAJ</h3>
+                            <a href="/pulsurl">Bajaj Pulsar RS200</a>
+                            <a href="/avangerl">Bajaj Avanger Stroot 180</a>
+                            <a href="/dominarl">Bajaj Dominar 400</a>
+                          </div>
+                          <div class="column">
+                            <h3>SUZUKI</h3>
+                            <a href="/suzukihayabusal">Suzuki Hayabusa</a>
+                            <a href="suzukiintruderl">Suzuki Intruder</a>
+                            <a href="/gxrl">Suzuki GSXR1000</a>
+                          </div>
+                          <div class="column">
+                            <h3>HERO</h3>
+                            <a href="/splendorl">Hero Splender iSmart</a>
+                            <a href="xtremel">Hero Xtrame Sports</a>
+                            <a href="/heropassionxprol">Hero Passion XPro</a>
+                          </div>
+                          <div class="column">
+                            <h3>ROYAL ENFIELD</h3>
+                            <a href="/thunderbirdl">RF ThunderBird 350X </a>
+                            <a href="/royalhimalayanl">RF Himalaya</a>
+                            <a href="/bulletl">RF Bullet 350</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topnav-right">
+                    <a href="/logout">log out</a>
+                      </div>
+      </div>
+
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/buyerform" method="POST">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="String" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="String" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="String" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="String" id="city" name="city" placeholder="New York">
+            <label for="bikemodel">Bike Model </label>
+            <input  name="bikemodel" type="String" placeholder="Please type the bike name here">
+            
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="String" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="String" id="zip" name="zip" placeholder="10001">
+              </div>
+
+            </div>
+          </div>
+
+          
+          
+        </div>
+        
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+    <!-- PAGE FOOTER GOES HERE -->
+    <footer>
+            <div><p>disclaimer</p></div>
+    <div><p>contact-us</p></div>
+    <div><p>about-us</p></div>
+    <div> <p>&copy;online bike store &bull; <a href="tel:9875551234">987-555-1234</a></p></div>
+     
+     
+    </footer>
+</div>
+
+</body>
+</html>

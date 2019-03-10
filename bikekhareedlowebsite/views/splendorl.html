@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Hero Passion X Pro</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+   pre {
+    text-align: left;
+    white-space: pre-line;
+    color: gold;
+    border-width: thick;
+  }
+    header {
+  background-color: blueviolet;
+  color: #bbc2ca;
+  padding: 1rem 2%; }
+  header form {
+    float: right; }
+  header form input {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin-right: 2%;
+    padding: .2rem;
+    border: none;
+    transition: width 0s; }
+  header form input:focus {
+    width: 8rem; }
+  header h1 {
+    font-size: 4rem;
+    font-weight: 300; }
+  header h2 {
+    font-size: 2.05rem;
+    font-weight: 300; }
+* {
+    box-sizing: border-box;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+      z-index: 1;
+      }
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow:auto;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+    position: relative;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+
+    
+    z-index: 9999;
+}
+
+.dropdown-content .header {
+    background: red;
+    
+    
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    
+    padding:52px;
+    background-color: #ccc;
+    
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+    /*  ----------------------- NAVIGATION --------------------------- */
+@media screen and (max-width: 60rem){
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+ 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+ 
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+}
+}
+.topnav-right{
+    float:right;
+}
+/*buy now button css*/
+  
+.button {
+    background-color: blue; /* Green */
+    border: round;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0
+  }
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+  /*FOOTER KI CSS*/
+  footer {
+  width: 100%;
+  background-color: #424e64; }
+  footer p {
+    text-align: center;
+    color: #bbc2ca;
+    padding: .75rem 0;
+    font-size: 1.5rem; }
+  footer p a {
+    color: #bbc2ca; }
+ 
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+</style>
+</head>
+<body>
+
+        <header>
+
+                
+                  
+                <h1>bikekhareedlo</h1>
+                <h2>Quality you can buy</h2>
+            </header>
+            <div class="navbar">
+                    <a href="/indexl">Home</a>
+                    
+                    
+                    
+                       <div class="dropdown">
+                      <button class="dropbtn">menu
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        
+                        <div class="row" >
+                          <div class="column">
+                            <h3>  BAJAJ</h3>
+                            <a href="/bajajpulsurl">Bajaj Pulsar RS200</a>
+                            <a href="/avangerl">Bajaj Avanger Stroot 180</a>
+                            <a href="/dominarl">Bajaj Dominar 400</a>
+                          </div>
+                          <div class="column">
+                            <h3>SUZUKI</h3>
+                            <a href="/suzukihayabusal">Suzuki Hayabusa</a>
+                            <a href="/suzukiintruderl">Suzuki Intruder</a>
+                            <a href="/gxrl">Suzuki GSXR1000</a>
+                          </div>
+                          <div class="column">
+                            <h3>HERO</h3>
+                            <a href="/splendorl">Hero Splender iSmart</a>
+                            <a href="/xtremel">Hero Xtrame Sports</a>
+                            <a href="/heropassionxprol">Hero Passion XPro</a>
+                          </div>
+                          <div class="column">
+                            <h3>ROYAL ENFIELD</h3>
+                            <a href="/thunderbirdl">RF ThunderBird 350X </a>
+                            <a href="/royalhimalayanl">RF Himalaya</a>
+                            <a href="/bulletl">RF Bullet 350</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="topnav-right";>
+                        <a href="/logout">log out </a>
+                        </div>
+                      </div>
+<div class="container"  >
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+      
+            <div class="item active">
+              <img src="./images/herosplenderismart/1.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/2.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/3.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/4.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/5.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/6.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/7.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            <div class="item ">
+              <img src="./images/herosplenderismart/8.jpg" alt="Chania" style="width: 100%;" height="300">
+              
+            </div>
+            
+            
+            
+            
+      
+            
+        
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid">
+          <h1>Hero Passion X Pro</h1>
+         
+          <div class="row">
+            <div class="col-sm-4" style="background-color:black;"><h2>ENGINE</h2>
+              <pre>
+                Type :	Air Cooled, 4 Stroke Single Cylinder , OHC
+                Displacement :	109.15cc
+                Max. Power :	7 Kw @ 7500 RPM
+                Max. Torque :	9 Nm @ 5500 RPM
+                Compression Ratio :	10:01
+            </pre></div>
+            <div class="col-sm-4" style="background-color:black;"><h2>TRANSMISSION AND CHASIS</h2>
+              <pre>
+                Clutch :	Multi-Plate, Wet Type
+                Frame :	Tubular Double Cradle
+
+
+
+              </pre>
+            </div>
+            <div class="col-sm-4" style="background-color:black;">
+              <h2>BRAKES</h2>
+              <pre>
+                Front Brake : Drum	130mm
+                Rear Brake : Drum	110mm
+
+
+
+              </pre>
+            </div>
+          </div>
+           
+            <div class="row">
+              <div class="col-sm-4" style="background-color:black;"><h2>WHEELS AND TYRES</h2>
+                <pre>
+                Tyre Size Front :	2.75 x 18-4 PR | 80/100-47 P Tyre w Tube | Tubeless Tyre
+               Tyre Size Rear :	2.75 X 18-6 PR | 80/100-54P Tyre w Tube | Tubeless Tyre
+
+
+
+
+
+
+               
+                </pre></div>
+              <div class="col-sm-4" style="background-color:black;"><h2>ELECTRICALS</h2>
+                <pre>
+                 Battery :	MF4 3Ah
+                 Head Lamp :	HS1 Bulb (35W/35W)
+                 Tail/Stop Lamp :	P21/5 Bulb (5W/21W)
+
+
+
+
+
+
+                </pre>
+              </div>
+              <div class="col-sm-4" style="background-color:black;">
+                <h2>DIMENSIONS</h2>
+                <pre>
+                    Length :	2015mm
+                    Width :	770mm
+                    Height :	1055mm
+                    Wheelbase :	1245mm
+                    Ground Clearance :	165mm
+                    Fuel Tank Capacity :	8.5 Litre
+                    Reserve :	2 Litre
+                    Kerb Weight :	115 Kg
+                    Max Payload :	130 Kg
+                </pre>
+                  
+<div>
+  <button class="button " style="float:right"><span> <a href="/buynow">buy now</a> </span></button>
+  </div>
+              </div>
+              
+        </div>
+        
+        <!-- PAGE FOOTER GOES HERE -->
+        <footer>
+            <div><p><a href="/disclaimerl">disclaimer</a></p></div>
+      
+    
+      <div> <p>&copy;online bike store &bull; <a href="tel:9875551234">987-555-1234</a></p></div>
+      
+      
+      </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

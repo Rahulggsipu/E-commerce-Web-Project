@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Pulsar RS200</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+  pre {
+    text-align: left;
+    white-space: pre-line;
+    color: gold;
+    border-width: thick;
+    background-color: black;
+  }
+    header {
+  background-color: blueviolet;
+  color: #bbc2ca;
+  padding: 1rem 2%; }
+  header form {
+    float: right; }
+  header form input {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin-right: 2%;
+    padding: .2rem;
+    border: none;
+    transition: width 0s; }
+  header form input:focus {
+    width: 8rem; }
+  header h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    font-style: italic; }
+  header h2 {
+    font-size: 2.05rem;
+    font-weight: 300; }
+* {
+    box-sizing: border-box;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+      z-index: 1;
+      }
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow:auto;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+    position: relative;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+
+    
+    z-index: 9999;
+}
+
+.dropdown-content .header {
+    background: red;
+    
+    
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    
+    padding:52px;
+    background-color: #ccc;
+    
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+    /*  ----------------------- NAVIGATION --------------------------- */
+@media screen and (max-width: 60rem){
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+ 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+ 
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+}
+}
+.topnav-right{
+    float:right;
+}
+/*buy now button css*/
+  
+.button {
+    background-color: blue; /* Green */
+    border: round;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0
+  }
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+  /*FOOTER KI CSS*/
+  footer {
+  width: 100%;
+  background-color: #424e64; }
+  footer p {
+    text-align: center;
+    color: #bbc2ca;
+    padding: .75rem 0;
+    font-size: 1.5rem; }
+  footer p a {
+    color: #bbc2ca; }
+ 
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+</style>
+</head>
+<body>
+
+        <header>
+
+                  
+                <h1>bikekhareedlo</h1>
+                <h2>Quality you can buy</h2>
+            </header>
+            <div class="navbar">
+                    <a href="/indexl">Home</a>
+                    
+                      
+                      
+                    
+                       <div class="dropdown">
+                      <button class="dropbtn">menu
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        
+                        <div class="row" >
+                          <div class="column">
+                            <h3>  BAJAJ</h3>
+                            <a href="/bajajpulsurl">Bajaj Pulsar RS200</a>
+                            <a href="/avangerl">Bajaj Avanger Stroot 180</a>
+                            <a href="/dominarl">Bajaj Dominar 400</a>
+                          </div>
+                          <div class="column">
+                            <h3>SUZUKI</h3>
+                            <a href="/suzukihayabusal">Suzuki Hayabusa</a>
+                            <a href="/suzukiintruderl">Suzuki Intruder</a>
+                            <a href="/gxrl">Suzuki GSXR1000</a>
+                          </div>
+                          <div class="column">
+                            <h3>HERO</h3>
+                            <a href="/splendorl">Hero Splender iSmart</a>
+                            <a href="/xtremel">Hero Xtrame Sports</a>
+                            <a href="/heropassionxprol">Hero Passion XPro</a>
+                          </div>
+                          <div class="column">
+                            <h3>ROYAL ENFIELD</h3>
+                            <a href="/thunderbirdl">RF ThunderBird 350X </a>
+                            <a href="/royalhimalayanl">RF Himalaya</a>
+                            <a href="/bulletl">RF Bullet 350</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topnav-right">
+                    <a href="/logout">log out</a>
+                      </div>
+                      </div>
+                      
+<div class="container"  >
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+            <li data-target="#myCarousel" data-slide-to="8"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+      
+            <div class="item active">
+              <img src="./images/pulsar/1.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>Twin Projector Headlamps</h3>
+                <p>Tame the darkest roads with the devils eyes!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/2.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>A.B.S.</h3>
+                <p>Get ultra safe bfeaking perfomance on any type of road!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/3.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>Fuel Injection System</h3>
+                <p>Seameless and traceable power delivery , feather touch start and optimum fuel eficiency!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/4.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>Triple Spark DTS-i Engine</h3>
+                <p>Patented and advance technology to unleash raw power!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/5.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>Perimeter Frame</h3>
+                <p>Conquer the trickiest hairpins with sharp handling!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/6.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                
+                <p>Optimum engine temperature in all wheather conditions!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/7.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>Nitrox Mono Suspension</h3>
+                <p>Invincible balance hels you carve corners or race ahead with super comfort!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/8.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+                <h3>Race Exhaust</h3>
+                <p>Throaty roar to ensure that hitting the redline sounds awesome!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="./images/pulsar/9.jpg" alt="Chania" style="width: 100%;" height="300">
+              <div class="carousel-caption">
+              
+                <p>Whizz past your cometition and dazzle them!</p>
+              </div>
+            </div>
+            
+            
+            
+      
+            
+        
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid">
+          <h1>Pulsar RS200</h1>
+         
+          <div class="row">
+            <div class="col-sm-4" style="background-color:black;"><h2>ENGINE</h2>
+              <pre>
+              Type               Fuel Injection System, 
+                                 Triple Spark 4 Valve 200cc DTS-i Eng
+                                 ine,liquid Cooled. 
+              Displacement(cc)   199.5 cc
+              Max power(PS@RPM)  24.5 @ 9750 
+              Max torque(Nm@RPM) 18.6 @ 8000
+            </pre></div>
+            <div class="col-sm-4" style="background-color:black;"><h2>SUSPENSION</h2>
+              <pre>
+              Front        Telescopic with anti-friction bush 
+              Rear         Nitrox mono shock absorber with Canister
+      
+      
+      
+      
+              </pre>
+            </div>
+            <div class="col-sm-4" style="background-color:black;">
+              <h2>BRAKES</h2>
+              <pre>
+                Front Single channel ABS, 300 dia disc 
+                Rear  230 dia disc
+      
+      
+      
+      
+              </pre>
+            </div>
+          </div>
+           
+            <div class="row">
+              <div class="col-sm-4" style="background-color:black;"><h2>TYRES</h2>
+                <pre>
+                Front  100/80-17" 52 P Tubeless
+                Rear   130/70-17" 62 P Tubeless
+              
+                </pre></div>
+              <div class="col-sm-4" style="background-color:black;"><h2>FUEL TANK</h2>
+                <pre>
+                  Total litres  13L
+      
+      
+                </pre>
+              </div>
+              <div class="col-sm-4" style="background-color:black;">
+                <h2>ELECTRICALS</h2>
+                <pre>
+                  System    12 V Full DC MF
+                  Headlamp  55 W Low beam Projector, 
+                            65 W High beam Projector
+                </pre>
+              </div>
+              <div class="row">
+                <div class="col-sm-4" style="background-color:black;"><h2>DIMENSIONS</h2>
+                <pre>
+                   Length (mm)            1999 
+                   Width (mm)             765 
+                   Height (mm)            1114 
+                   Ground clearance (mm)  157 
+                   Wheelbase (mm)         1355 
+                   Kerb weight (kg)       164
+                </pre
+                ></div>
+                <div class="col-sm-4" style="background-color:black;"><h2>ACCELERATION</h2>
+                  <pre>
+                    Max speed  140.8 kmph
+      
+      
+      
+      
+      
+                  </pre>
+                </div>
+                <div class="col-sm-4" style="background-color:black;">
+                  <pre style="background-color:black;border-color:black;">
+                  
+                
+      
+      
+      
+      
+      
+      
+      
+                </pre></div>
+                  
+<div>
+  <button class="button " style="float:right"><span> <a href="/buynow">buy now</a> </span></button>
+  </div>
+                
+            </div>
+        </div>
+        
+        <!-- PAGE FOOTER GOES HERE -->
+    <div>
+        <footer>
+            <div><p><a href="/disclaimerl">disclaimer</a></p></div>
+        
+
+        <div> <p>&copy;online bike store &bull; <a href="tel:9875551234">987-555-1234</a></p></div>
+        
+        
+        </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

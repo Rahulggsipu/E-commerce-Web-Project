@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      
+      <h1>Order List</h1>
+      <% if(buyers.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Email ID</th>
+            <th>Address</th>
+            <th>city</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Bike Model</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<buyers.length;i++) { %>
+            <tr>
+              <td><%= buyers[i].firstname%></a></td>
+              <td><%= buyers[i].email%></td>
+              <td><%= buyers[i].address%></td>
+              <td><%= buyers[i].city%></td>
+              <td><%= buyers[i].state%></td>
+              <td><%= buyers[i].zip%></td>
+              <td><%= buyers[i].bikemodel%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No Orders found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

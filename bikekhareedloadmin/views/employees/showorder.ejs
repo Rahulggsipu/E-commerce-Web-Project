@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback Details</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/buyers">Order List</a></h3>
+      <h2>Order Detail</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td> Name</td>
+            <td>:</td>
+            <td><%= buyer.firstname %></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><%= buyer.email %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td><%= buyer.address %></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>:</td>
+            <td>$<%= buyer.city %></td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td>:</td>
+            <td>$<%= buyer.state %></td>
+          </tr>
+          <tr>
+            <td>Zip</td>
+            <td>:</td>
+            <td>$<%= buyer.zip %></td>
+          </tr>
+          <tr>
+            <td>Bike Model</td>
+            <td>:</td>
+            <td>$<%= buyer.bikemodel %></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      </form>
+    </div>
+  </body>
+</html>

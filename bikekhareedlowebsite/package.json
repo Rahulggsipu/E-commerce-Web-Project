@@ -1,0 +1,28 @@
+{
+  "name": "startingnode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.1.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.2.0",
+    "hjs": "~0.0.6",
+    "http-errors": "~1.6.2",
+    "joi": "^13.4.0",
+    "jquery": "^3.3.1",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.2",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "swig": "^1.4.2"
+  }
+}

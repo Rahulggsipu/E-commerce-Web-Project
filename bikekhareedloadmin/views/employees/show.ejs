@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/users">Users List</a></h3>
+      <h2>User Detail</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>First Name</td>
+            <td>:</td>
+            <td><%= user.first_name %></td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>:</td>
+            <td><%= user.last_name %></td>
+          </tr>
+          <tr>
+            <td>User Name</td>
+            <td>:</td>
+            <td><%= user.user_name %></td>
+          </tr>
+          <tr>
+            <td>Email Id</td>
+            <td>:</td>
+            <td>$<%= user.email %></td>
+          </tr>
+          <tr>
+            <td>Contact Number</td>
+            <td>:</td>
+            <td>$<%= user.contact_no %></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback Details</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/contacts">Feedback List</a></h3>
+      <h2>Feedback Detail</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td> Name</td>
+            <td>:</td>
+            <td><%= contact.myname %></td>
+          </tr>
+          
+          <tr>
+            <td>Phone Number</td>
+            <td>:</td>
+            <td><%= contact.phone %></td>
+          </tr>
+          <tr>
+            <td>Email Id</td>
+            <td>:</td>
+            <td>$<%= contact.email %></td>
+          </tr>
+          <tr>
+            <td>Subject</td>
+            <td>:</td>
+            <td>$<%= contact.subject %></td>
+          </tr>
+          <tr>
+            <td>Message</td>
+            <td>:</td>
+            <td>$<%= contact.message %></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      </form>
+    </div>
+  </body>
+</html>

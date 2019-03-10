@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      
+      <h1>Feedback List</h1>
+      <% if(contacts.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th> Name</th>
+            <th>Email Id</th>
+            <th>Phone Number</th>
+            <th>Subject</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<contacts.length;i++) { %>
+            <tr>
+              <td><%= contacts[i].myname%></a></td>
+              <td><%= contacts[i].email%></td>
+              <td><%= contacts[i].phone%></td>
+              <td><%= contacts[i].subject%></td>
+              <td><%= contacts[i].message%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No Feedback found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>
